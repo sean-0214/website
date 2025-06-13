@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Chiang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">Sean Chiang</a>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="mountain.html">Mountain & Fitness</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                <li><a href="https://youtube.com/" target="_blank">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Sean Chiang</h1>
+                <p class="subtitle">Computational Finance | Quantitative Research | Asset Management</p>
+                <p class="description">Junior in <strong>Computational Finance</strong> at <strong>City University of Hong Kong</strong> with experience in <strong>quantitative research</strong> and <strong>asset management</strong> as an ex-<strong>SFC Type 1 licensee</strong>. Passionate about applying technologies to <strong>discovering</strong> investment opportunities and <strong>developing</strong> risk management strategies.</p>
+                <div class="contact-info">
+                    <p>✉️ sean021453@gmail.com</p>
+                    <p>📍 Hong Kong / Taiwan</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Sean Chiang">
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects & Competitions</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>International Quant Championship 2024</h3>
+                    <p>Local competition product portfolio with IR 2.686, Sharpe 3.022. Created Alpha Function to filter investments with Python based on performance metrics.</p>
+                    <a href="projects/worldquant.html" class="btn-link">Learn more</a>
+                </div>
+                <div class="project-item">
+                    <h3>Point 72 x Fidelity x AIBC Asset Management Competition</h3>
+                    <p>Conducted FX analysis and presented on Natural Gas over Brent Oil as a more cost efficient source of power generation.</p>
+                    <a href="projects/asset-management.html" class="btn-link">Learn more</a>
+                </div>
+                <div class="project-item">
+                    <h3>Green Finance Research</h3>
+                    <p>Conducted independent research on China-related ESG strategies for Bank of America Merrill Lynch, analyzing sustainable finance methodologies.</p>
+                    <a href="projects/green-finance.html" class="btn-link">Learn more</a>
+                </div>
+                <div class="project-item">
+                    <h3>Open Data Hackathon 2024-25</h3>
+                    <p>Participated in the Hong Kong Techathon 2025, working on innovative data solutions for urban challenges.</p>
+                    <a href="projects/hackathon.html" class="btn-link">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>Areas of Interest</h2>
+            <ul class="interests-list">
+                <li><strong>Mountain and Fitness</strong> - Outdoor activities and physical training</li>
+                <li><strong>Music</strong> - Violinist for 15+ years, Viola and Mandolin hobbyist</li>
+                <li><strong>Volunteer Work</strong> - Community service and charitable activities</li>
+                <li><strong>Sustainable Investing</strong> - Research on ESG strategies and implementation</li>
+                <li><strong>Financial Literacy</strong> - Education and awareness initiatives</li>
+            </ul>
+                <div class="interest-item">
+                    <h3>Music</h3>
+                    <ul>
+                        <li>Musical influences and preferences</li>
+                        <li>Instruments played and performances</li>
+                        <li>Music projects and collaborations</li>
+                    </ul>
+                    <a href="music.html" class="interest-link">Learn More</a>
+                </div>
+
+                <div class="interest-item">
+                    <h3>Volunteer Work</h3>
+                    <ul>
+                        <li>Community service initiatives</li>
+                        <li>Charitable organizations supported</li>
+                        <li>Impact and personal growth</li>
+                    </ul>
+                    <a href="volunteer.html" class="interest-link">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Sean Chiang</p>
+        <p>Connect with me <a href="https://twitter.com/" target="_blank">@seanchianghandle</a></p>
+    </footer>
+
+    <script>
+        // Simple script to handle navigation highlight
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = location.href;
+            const navItems = document.querySelectorAll('#main-nav a');
+            navItems.forEach(item => {
+                if(item.href === currentLocation) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

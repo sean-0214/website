@@ -1,0 +1,8 @@
+# No external dependencies required
+# This project uses Python's standard library modules:
+# - http.server
+# - socketserver
+# - webbrowser
+# - os
+# - sys
+# - urllib.parse

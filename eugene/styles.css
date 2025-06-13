@@ -1,0 +1,229 @@
+/* Eugene Yan Style */
+:root {
+    --primary-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --secondary-font: 'IBM Plex Serif', Georgia, serif;
+    --text-color: #333;
+    --text-light: #666;
+    --accent-color: #0366d6;
+    --light-gray: #f6f8fa;
+    --border-color: #e1e4e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.site-title a {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-color);
+}
+
+/* Bio section */
+.bio {
+    margin-bottom: 4rem;
+}
+
+.bio h1 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.tagline {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Featured posts */
+.featured, .areas {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.post {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+h3 a:hover {
+    color: var(--accent-color);
+}
+
+.post p, .area p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Areas of interest */
+.area {
+    margin-bottom: 2.5rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .site-title {
+        margin-bottom: 1rem;
+    }
+    
+    nav {
+        gap: 1rem;
+    }
+    
+    .bio h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .footer-links a:first-child {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Chiang - Website Style Selector</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        p.lead {
+            font-size: 1.2rem;
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .style-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .style-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .style-preview {
+            height: 220px;
+            background-color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .style-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .style-card:hover .style-preview img {
+            transform: scale(1.05);
+        }
+        .style-info {
+            padding: 20px;
+        }
+        .style-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        .style-info p {
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        .style-links {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #3182ce;
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: #4299e1;
+            border: 1px solid #4299e1;
+        }
+        .btn-outline:hover {
+            background-color: #ebf8ff;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sean Chiang's Website Styles</h1>
+            <p class="lead">Select from six different website styles to preview how your personal website could look. Each style has been crafted with a different aesthetic approach and content organization.</p>
+        </header>
+
+        <div class="style-grid">
+            <div class="style-card">
+                <div class="style-preview">
+                    <img src="https://via.placeholder.com/350x220/e2e8f0/718096?text=Saleh+Style" alt="Saleh Hamadeh Style Preview">
+                </div>
+                <div class="style-info">
+                    <h2>Saleh Hamadeh Style</h2>
+                    <p>Clean, professional portfolio with minimal navigation and focused content presentation.</p>
+                    <div class="style-links">
+                        <a href="saleh/index.html" class="btn">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <div class="style-preview">
+                    <img src="https://via.placeholder.com/350x220/e2e8f0/718096?text=Jeremy+Style" alt="Jeremy Jordan Style Preview">
+                </div>
+                <div class="style-info">
+                    <h2>Jeremy Jordan Style</h2>
+                    <p>Academic/professional blog with clean typography and featured content sections.</p>
+                    <div class="style-links">
+                        <a href="jeremy/index.html" class="btn">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <div class="style-preview">
+                    <img src="https://via.placeholder.com/350x220/e2e8f0/718096?text=Eugene+Style" alt="Eugene Yan Style Preview">
+                </div>
+                <div class="style-info">
+                    <h2>Eugene Yan Style</h2>
+                    <p>Minimalist blog focused on technical content with clear typography and spacing.</p>
+                    <div class="style-links">
+                        <a href="eugene/index.html" class="btn">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <div class="style-preview">
+                    <img src="https://via.placeholder.com/350x220/e2e8f0/718096?text=Lex+Style" alt="Lex Fridman Style Preview">
+                </div>
+                <div class="style-info">
+                    <h2>Lex Fridman Style</h2>
+                    <p>Sleek personal branding with prominent navigation and personal identity focus.</p>
+                    <div class="style-links">
+                        <a href="lex/index.html" class="btn">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <div class="style-preview">
+                    <img src="https://via.placeholder.com/350x220/e2e8f0/718096?text=Sahil+Style" alt="Sahil Dua Style Preview">
+                </div>
+                <div class="style-info">
+                    <h2>Sahil Dua Style</h2>
+                    <p>Ultra-minimalist landing page focusing on personal branding and key links.</p>
+                    <div class="style-links">
+                        <a href="sahil/index.html" class="btn">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <div class="style-preview">
+                    <img src="https://via.placeholder.com/350x220/e2e8f0/718096?text=Ricky+Style" alt="Ricky Dang Style Preview">
+                </div>
+                <div class="style-info">
+                    <h2>Ricky Dang Style</h2>
+                    <p>Blog-centric with featured posts, tags, and sidebar for additional content.</p>
+                    <div class="style-links">
+                        <a href="ricky/index.html" class="btn">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Sean Chiang. All website styles are customizable and can be easily modified.</p>
+        </footer>
+    </div>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>

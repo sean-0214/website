@@ -1,0 +1,19 @@
+[build]
+  publish = "/"
+  command = ""
+
+[dev]
+  framework = "#static"
+
+# Handle the admin path for Netlify CMS
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Standard SPA fallback (only apply if file doesn't exist)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "sahil-pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Sahil Style Pages" # Used in the UI
+    folder: "sahil" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    extension: "html"
+    format: "html"
+    editor:
+      preview: true
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "html"}
+
+  - name: "sahil-projects"
+    label: "Sahil Projects"
+    folder: "sahil/projects"
+    create: true
+    extension: "html"
+    format: "html"
+    editor:
+      preview: true
+    fields:
+      - {label: "Project Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "html"}
+      - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - label: "Main Index"
+        name: "index"
+        file: "index.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "html"}
