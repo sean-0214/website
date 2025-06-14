@@ -1,23 +1,19 @@
 backend:
   name: git-gateway
-  branch: master # Changed to master since that's the branch you pushed to
+  branch: main
 
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "sahil-pages" # Used in routes, e.g., /admin/collections/blog
-    label: "Sahil Style Pages" # Used in the UI
-    folder: "sahil" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "sahil-pages"
+    label: "Sahil Style Pages"
+    folder: "sahil"
+    create: true
     extension: "html"
- cms-fixes
-    # Removed invalid format field
-
- main
     editor:
       preview: true
-    fields: # The fields for each document, usually in front matter
+    fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
@@ -26,10 +22,6 @@ collections:
     folder: "sahil/projects"
     create: true
     extension: "html"
- cms-fixes
-    # Removed invalid format field
-
- main
     editor:
       preview: true
     fields:
