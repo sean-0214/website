@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Load React as a dependency for rich text editor -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- Load Netlify CMS custom widgets -->
+  <script src="https://unpkg.com/netlify-cms-widget-html@1.2.0/dist/netlify-cms-widget-html.js"></script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    // Register HTML widget
+    if (window.CMS) {
+      window.CMS.registerWidget('html', window.NetlifyCmsWidgetHtml.control, window.NetlifyCmsWidgetHtml.preview);
+    } else {
+      console.error('Netlify CMS main script not loaded yet');
+    }
+  </script>
 </body>
 </html>
