@@ -9,5 +9,21 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  
+  <script>
+    // Use markdown widget instead of html widget which is more compatible
+    if (window.CMS) {
+      // Replace html widget with markdown widget
+      window.CMS.registerPreviewTemplate('sahil-pages', function(props) {
+        return h('div', {}, h('div', {dangerouslySetInnerHTML: {__html: props.entry.getIn(['data', 'body'])}}));
+      });
+      window.CMS.registerPreviewTemplate('sahil-projects', function(props) {
+        return h('div', {}, h('div', {dangerouslySetInnerHTML: {__html: props.entry.getIn(['data', 'body'])}}));
+      });
+      window.CMS.registerPreviewTemplate('homepage', function(props) {
+        return h('div', {}, h('div', {dangerouslySetInnerHTML: {__html: props.entry.getIn(['data', 'body'])}}));
+      });
+    }
+  </script>
 </body>
 </html>
