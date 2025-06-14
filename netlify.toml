@@ -16,4 +16,4 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
+# force = false ( canceled this line at 1:33 am 14/6, for Issue 2: /sahil/admin/Routing issue

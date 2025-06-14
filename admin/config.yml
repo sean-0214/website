@@ -11,7 +11,10 @@ collections:
     folder: "sahil" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: "html"
+ cms-fixes
     # Removed invalid format field
+
+ main
     editor:
       preview: true
     fields: # The fields for each document, usually in front matter
@@ -23,7 +26,10 @@ collections:
     folder: "sahil/projects"
     create: true
     extension: "html"
+ cms-fixes
     # Removed invalid format field
+
+ main
     editor:
       preview: true
     fields:
