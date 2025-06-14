@@ -16,7 +16,7 @@ collections:
       preview: true
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "html"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "sahil-projects"
     label: "Sahil Projects"
@@ -30,7 +30,7 @@ collections:
       - {label: "Project Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "html"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "homepage"
@@ -41,4 +41,4 @@ collections:
         file: "index.html"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "html"}
+          - {label: "Body", name: "body", widget: "markdown"}
